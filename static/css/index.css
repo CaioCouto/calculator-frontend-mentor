@@ -1,0 +1,230 @@
+/* Misc */
+/* Theme 1 */
+html {
+  font-family: "League Spartan", sans-serif;
+}
+html h1, html h2, html h3, html h4, html h5, html h6, html p, html label {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(222deg, 26%, 31%);
+}
+body.theme2 {
+  color: hsl(60deg, 10%, 19%);
+  background: hsl(0deg, 0%, 90%);
+}
+body.theme3 {
+  color: hsl(52deg, 100%, 62%);
+  background: hsl(268deg, 75%, 9%);
+}
+
+.main {
+  gap: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  .main {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media (min-width: 900px) {
+  .main {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    margin: 0 auto;
+    width: 30%;
+  }
+}
+.main-section {
+  margin-bottom: 0.5rem;
+}
+.main-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-section-headerThemeSelector {
+  gap: 0.5rem;
+  display: flex;
+  align-items: end;
+}
+.main-section-headerThemeSelector p, .main-section-headerThemeSelector label {
+  font-size: 1rem;
+}
+.main-section-headerSwitch {
+  display: flex;
+  align-items: center;
+  background: veryLightGrayScreenBG;
+}
+.main-section-headerSwitch:hover, .main-section-headerSwitch *:hover {
+  cursor: pointer;
+}
+.main-section-headerSwitch > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main-section-headerSwitch button {
+  border: 0;
+  outline: 0;
+  padding: 5px;
+  background: hsl(224deg, 36%, 15%);
+}
+.main-section-headerSwitch button.theme2 {
+  background: hsl(0deg, 5%, 81%);
+}
+.main-section-headerSwitch button.theme3 {
+  background: hsl(268deg, 71%, 12%);
+}
+.main-section-headerSwitch button:hover {
+  border: 0;
+  outline: 0;
+}
+.main-section-headerSwitch button div {
+  width: 13px;
+  height: 13px;
+  border-radius: 50px;
+  background: hsl(224deg, 36%, 15%);
+}
+.main-section-headerSwitch button div.active {
+  background: hsl(6deg, 63%, 50%);
+}
+.main-section-headerSwitch button div.theme2 {
+  background: hsl(0deg, 5%, 81%);
+}
+.main-section-headerSwitch button div.theme2.active {
+  background: hsl(25deg, 98%, 40%);
+}
+.main-section-headerSwitch button div.theme3 {
+  background: hsl(268deg, 71%, 12%);
+}
+.main-section-headerSwitch button div.theme3.active {
+  background: hsl(176deg, 100%, 44%);
+}
+.main-section-headerSwitch #b1 {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.main-section-headerSwitch #b3 {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.main-section-visor {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: hsl(224deg, 36%, 15%);
+}
+.main-section-visor.theme2 {
+  background: hsl(0deg, 0%, 93%);
+}
+.main-section-visor.theme3 {
+  background: hsl(268deg, 71%, 12%);
+}
+.main-section-keyboard {
+  padding: 1.2rem;
+  gap: 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  background: hsl(223deg, 31%, 20%);
+}
+.main-section-keyboard.theme2 {
+  background: hsl(0deg, 5%, 81%);
+}
+.main-section-keyboard.theme3 {
+  background: hsl(268deg, 71%, 12%);
+}
+.main-section-keyboardRow {
+  gap: 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px;
+}
+.main-section-keyboardRow-key {
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(221deg, 14%, 31%);
+  background: hsl(30deg, 25%, 89%);
+  box-shadow: 0 3px 0 hsl(28deg, 16%, 65%);
+}
+.main-section-keyboardRow-key.theme2 {
+  color: hsl(60deg, 10%, 19%);
+  background: hsl(45deg, 7%, 89%);
+  box-shadow: 0 3px 0 hsl(35deg, 11%, 61%);
+}
+.main-section-keyboardRow-key.theme3 {
+  color: hsl(52deg, 100%, 62%);
+  background: hsl(268deg, 47%, 21%);
+  box-shadow: 0 3px 0 hsl(290deg, 70%, 36%);
+}
+.main-section-keyboardRow-key:hover {
+  cursor: pointer;
+}
+.main-section-keyboardRow-number {
+  font-size: 32px;
+}
+.main-section-keyboardRow-reset, .main-section-keyboardRow-equal {
+  grid-column: span 2;
+  color: hsl(0deg, 0%, 100%);
+}
+.main-section-keyboardRow-reset, .main-section-keyboardRow-del {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(225deg, 21%, 49%);
+  box-shadow: 0 3px 0 hsl(224deg, 28%, 35%);
+}
+.main-section-keyboardRow-reset.theme2, .main-section-keyboardRow-del.theme2 {
+  background: hsl(185deg, 42%, 37%);
+  box-shadow: 0 3px 0 hsl(185deg, 58%, 25%);
+}
+.main-section-keyboardRow-reset.theme3, .main-section-keyboardRow-del.theme3 {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(281deg, 89%, 26%);
+  box-shadow: 0 3px 0 hsl(285deg, 91%, 52%);
+}
+.main-section-keyboardRow-equal {
+  background: hsl(6deg, 63%, 50%);
+  box-shadow: 0 3px 0 hsl(6deg, 70%, 34%);
+  grid-column: span 2;
+}
+.main-section-keyboardRow-equal.theme2 {
+  background: hsl(25deg, 98%, 40%);
+  box-shadow: 0 3px 0 hsl(25deg, 99%, 27%);
+}
+.main-section-keyboardRow-equal.theme3 {
+  color: hsl(198deg, 20%, 13%);
+  background: hsl(176deg, 100%, 44%);
+  box-shadow: 0 3px 0 hsl(177deg, 92%, 70%);
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

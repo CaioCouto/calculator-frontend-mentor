@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Local style -->
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Calculator app</title> 
+</head>
+<body>
+
+  <main class="main">
+    
+    <section class="main-section main-section-header">
+      <h1>calc</h1>
+
+      <div class="main-section-headerThemeSelector">
+        <p>THEME</p>
+        <div class="main-section-headerSwitch">
+          <div>
+            <label for="on" onclick="">1</label>
+            <button id="b1" class="main-section-headerSwitchBtn"><div></div></button>
+          </div>
+          
+          <div>
+            <label for="na" class="disabled" onclick="">2</label>
+            <button id="b2" class="main-section-headerSwitchBtn"><div></div></button>
+          </div>
+          
+          <div>
+            <label for="off" onclick="">3</label>
+            <button id="b3" class="main-section-headerSwitchBtn"><div></div></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section main-section-visor">
+      <h1 class="main-section-result">0</h1>
+    </section>
+
+    <section class="main-section main-section-keyboard">
+      <div class="main-section-keyboardRow">
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number">7</div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>8</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>9</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-del"><p>DEL</p></div>
+      </div>
+      <div class="main-section-keyboardRow">
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>4</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>5</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>6</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>+</p></div>
+      </div>
+      <div class="main-section-keyboardRow">
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>1</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>2</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>3</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>-</p></div>
+      </div>
+      <div class="main-section-keyboardRow">
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>.</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>0</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>/</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-number"><p>x</p></div>
+      </div>
+      <div class="main-section-keyboardRow">
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-reset"><p>RESET</p></div>
+        <div class="main-section-keyboardRow-key main-section-keyboardRow-equal"><p>=</p></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="https://github.com/CaioCouto">Caio Couto</a>.</p>
+  </footer>
+
+  <script src="static/js/main.js" type="module"></script>
+</body>
+</html>
