@@ -21,8 +21,9 @@ Os usuário devem ser capazes de:
 - Ver a aplicação de forma otimizada de acordo com a tela utilziada;
 - realizar operações matemáticas de adição, subtração, multiplicação de divisão;
 - Ajudar o tema de cores de acordo com a preferência (há 3 opções);
-- **bonus**: o tema escolhido é mantido da próxima vez que a aplicação for acessada.
+- **bonus**: O tema escolhido se torna o inicial, utilizando `prefers-color-scheme` e salvar mudanças no browser.
 
+Bom... O desafio pede para usar `prefers-color-scheme`, mas eu não usei. Porém, as mudanças ainda são salvar no LocalStorage.
 **en.**
 Your challenge is to build out this calculator app and get it looking as close to the design as possible.
 
@@ -32,6 +33,8 @@ Your users should be able to:
 - Perform mathematical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
+
+Well... The challenge asked to use `prefers-color-scheme`, but I didn't use it. The changes are still saved in LocalStorage though.
 
 ### Links    
 
