@@ -1,10 +1,19 @@
 export default class ThemeSelector {
     constructor() {
-        this.__activeDivIndex = 0;
-        this.__bodyElement = document.querySelector('body');
-        this.__allBodyChildren = document.querySelectorAll('body *');
+        this.__activeDivIndex = parseInt(this.__loadTheme());
+        this.__elements = document.documentElement.querySelectorAll('*');
         this.__switchBtns = document.querySelectorAll('.main-section-headerSwitchBtn');
+
         this.__addClass(this.__switchBtns[this.__activeDivIndex].querySelector('div'), 'active');
+        this.__elements.forEach(element => this.__addClass(element, `theme${this.__activeDivIndex+1}`));
+    }
+
+    __saveTheme() {
+        localStorage.setItem('theme', this.__activeDivIndex);
+    }
+    
+    __loadTheme() {
+        return localStorage.getItem('theme') || 0;
     }
 
     __setNewIndex() {
@@ -22,12 +31,11 @@ export default class ThemeSelector {
     }
 
     changeTheme() {
-        this.__removeClass(this.__bodyElement, `theme${this.__activeDivIndex+1}`);
         this.__removeClass(this.__switchBtns[this.__activeDivIndex].querySelector('div'), 'active');
-        this.__allBodyChildren.forEach(element => this.__removeClass(element, `theme${this.__activeDivIndex+1}`));
+        this.__elements.forEach(element => this.__removeClass(element, `theme${this.__activeDivIndex+1}`));
         this.__setNewIndex();
-        this.__addClass(this.__bodyElement, `theme${this.__activeDivIndex+1}`);
         this.__addClass(this.__switchBtns[this.__activeDivIndex].querySelector('div'), 'active');
-        this.__allBodyChildren.forEach(element => this.__addClass(element, `theme${this.__activeDivIndex+1}`));
+        this.__elements.forEach(element => this.__addClass(element, `theme${this.__activeDivIndex+1}`));
+        this.__saveTheme();
     }
 }
